@@ -42,7 +42,7 @@
                         </div>
                         <div>
                             <div class="mb-3">
-                                <label for="" class="form-label">End</label>
+                                <label for="end" class="form-label">End</label>
                                 <input type="date" class="form-control" name="end" id="end" aria-describedby="helpId" placeholder=""/>
                             </div>
                             
