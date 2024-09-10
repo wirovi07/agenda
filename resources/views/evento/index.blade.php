@@ -1,15 +1,8 @@
 @extends('layouts.app')
 @section('content')
     <div class="container">
-        <div id="agenda">
-            Calendario
-        </div>
+        <div id="agenda"></div>
     </div>
-
-    <!-- Modal trigger button -->
-    <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#evento">
-        Launch
-    </button>
     
     <!-- Modal Body -->
     <div class="modal fade" id="evento" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
@@ -17,14 +10,14 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="modalTitleId">
-                        Modal title
+                        Datos del evento
                     </h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="">
+                    <form action="" id="formularioEventos">
                         {!! csrf_field() !!}
-                        <div class="mb-3">
+                        <div class="mb-3 d-none">
                             <label for="" class="form-label">ID:</label>
                             <input  type="text" class="form-control" id="id" name="id"  aria-describedby="helpId" placeholder="">
                         </div>
@@ -36,12 +29,12 @@
                             <label for="descripcion" class="form-label">Descripción</label>
                             <textarea class="form-control" name="descripcion" id="descripcion" rows="3"></textarea>
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-3 d-none">
                             <label for="start" class="form-label">Start</label>
                             <input type="date" class="form-control" name="start" id="start" aria-describedby="helpId" placeholder=""/>
                         </div>
                         <div>
-                            <div class="mb-3">
+                            <div class="mb-3 d-none">
                                 <label for="end" class="form-label">End</label>
                                 <input type="date" class="form-control" name="end" id="end" aria-describedby="helpId" placeholder=""/>
                             </div>

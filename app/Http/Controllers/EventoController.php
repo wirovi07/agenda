@@ -17,14 +17,6 @@ class EventoController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
@@ -58,14 +50,17 @@ class EventoController extends Controller
      */
     public function update(Request $request, Evento $evento)
     {
-        //
+        request()->validate(Evento::$rules);
+        $evento->update($request->all());
+        return response()->json($evento);
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Evento $evento)
+    public function destroy($id)
     {
-        //
+        $evento = Evento::find($id)->delete();
+        return response()->json($evento);
     }
 }
