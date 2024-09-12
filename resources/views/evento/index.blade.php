@@ -38,7 +38,6 @@
                                 <label for="end" class="form-label">End</label>
                                 <input type="date" class="form-control" name="end" id="end" aria-describedby="helpId" placeholder=""/>
                             </div>
-                            
                         </div>
                     </form>
                     
